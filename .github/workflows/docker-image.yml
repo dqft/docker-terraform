@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image for aarch64
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s) \
-        --build-arg DOCKER_PLATFORM=arm64v8 \
-        --build-arg TERRAFORM_VERSION=1.1.2 \
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+        --build-arg DOCKER_PLATFORM=arm64v8
+        --build-arg TERRAFORM_VERSION=1.1.2
         --build-arg TERRAFORM_PLATFORM=linux_arm64
